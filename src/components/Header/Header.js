@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
-import './Header.styles.css';
+import { Link } from 'react-router-dom';
+
 import { useSearch } from '../../context/SearchContext';
+import './Header.styles.css';
 
 function Header() {
   const { search, setSearch } = useSearch();
@@ -19,7 +21,9 @@ function Header() {
 
   return (
     <div className="header">
-      <button>Menu</button>
+      <Link to="/">
+        <button>Menu</button>
+      </Link>
       <div className="header-input">
         <svg width="20" height="20"></svg>
         <input

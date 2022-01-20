@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
@@ -8,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <SearchProvider>
-        <Header />
-        <Content />
+        <BrowserRouter>
+          <Header />
+          <Content />
+        </BrowserRouter>
       </SearchProvider>
     </div>
   );

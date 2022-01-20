@@ -32,9 +32,9 @@ function Youtube() {
   useEffect(() => {
     // https://jsonplaceholder.typicode.com/users
     // https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=the%20weeknd&key=AIzaSyCEseedJLKU_b4L_xqUVrfmeCYOR3LbCWY
-    console.log(search);
+    // console.log(search);
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=AIzaSyDWxNt_pdmdnVerDG3wPSPPBaZcbDEXfsc`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${search}&key=AIzaSyCYveR8pD5F6EmbgRnLUUaSmL67RrO3klo`
     )
       .then((res) => res.json())
       .then(
