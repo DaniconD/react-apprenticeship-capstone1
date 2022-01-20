@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-apprenticeship-capstone1/precache-manifest.c139a2547e4948b0afbd367745e5b6ee.js"
+  "/react-apprenticeship-capstone1/precache-manifest.44ebebb098fd6378c6f6ca9f702fe3ba.js"
 );
 
 self.addEventListener('message', (event) => {
