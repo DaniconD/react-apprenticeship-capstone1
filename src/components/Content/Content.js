@@ -1,15 +1,25 @@
 import React from 'react';
 import './Content.styles.css';
+import Youtube from '../../api/Youtube';
+import VideoDetailView from '../Video/VideoDetailView';
 
-import Grid from '../List/Grid';
-import MockData from '../../data/youtube-videos-mock.json';
+import { Switch, Route } from 'react-router-dom';
 
 function Content() {
   return (
     <section className="content">
       <h1>Capstone Project 1</h1>
       <div className="elements">
-        <Grid items={MockData.items} />
+        <Switch>
+          <Route path="/video/:id">
+            <VideoDetailView />
+          </Route>
+          <Route path="/asd">asd</Route>
+          <Route path="/">
+            <Youtube />
+            hola
+          </Route>
+        </Switch>
       </div>
     </section>
   );
