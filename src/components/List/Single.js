@@ -6,13 +6,12 @@ import NotFound from '../../assets/NotFound.png';
 
 function Single({ item }) {
   return (
-    // <Link to={`/video/${item.id.videoId}`}>
     <Link to={`/video/${item.id.videoId}`}>
       <div className="single-container">
         <div className="thumbnail">
           <img
             src={item.snippet ? item.snippet.thumbnails.high.url : NotFound}
-            alt={item.snippet ? item.snippet.title : NotFound}
+            alt={item.snippet ? item.snippet.title : 'NotFound'}
           ></img>
         </div>
         <div className="info">

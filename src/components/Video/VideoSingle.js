@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NotFound from '../../assets/NotFound.png';
 
 import './VideoSingle.styles.css';
 
-function VideoSingle() {
+function VideoSingle({ item }) {
   return (
-    <Link to="/video">
+    <Link to={`/video/${item.id.videoId}`}>
       <div className="video-single-container">
         <img
-          src="https://yt3.ggpht.com/ytc/AAUvwnighSReQlmHl_S_vSfvnWBAG5Cw4A0YxtE0tm5OpQ=s88-c-k-c0xffffffff-no-rj-mo"
-          alt="mini video"
+          src={item.snippet ? item.snippet.thumbnails.high.url : NotFound}
+          alt={item.snippet ? item.snippet.title : 'NotFound'}
         />
         <div className="title">
-          <p>Titulo</p>
+          <p>{item.snippet ? item.snippet.title : 'NotFound'}</p>
         </div>
       </div>
     </Link>
